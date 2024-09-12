@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demo {{x}}{{y}}</h1>
+
+    {% comment %}
+    {% if a > c and a > d %}
+        
+            <h1>a is greter</h1>
+    {% elif c > d and c > a %}
+    
+            <h1>c is greter</h1>
+    {% else %}
+        <h1>d is greter</h1>
+    {% endif %}
+
+
+    {% if a > c %}
+        {% if a > d %}
+            <h1>a is greater</h1>
+        {% else %}
+            <h1>d is greater</h1>
+    {% endif %}
+    {% elif c > d %}
+        {% if c > a %}
+            <h1>c is greater</h1>
+        {% endif %}
+    {% else %}
+        <h1>d is greater</h1>
+    {% endif %}
+
+    <p>------------------------------------------</p>
+
+    {% for i in y %}
+        {{forloop.counter}}
+        {{i}}<br>
+        
+
+    {% endfor %}
+
+    {% endcomment %}
+
+    {% for i in data %}
+        <b>student id:</b>{{i.id}}<br>
+        <b>student name:</b>{{i.name}}<br>
+        <b>city:</b>{{i.city}}<br>
+        <b>---------------</b><br>
+
+    {% endfor %}
+
+</body>
+</html>
